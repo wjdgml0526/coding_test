@@ -24,7 +24,7 @@ jobs:
       - name: Check if it's the personal repo
         id: repo-check
         run: |
-          if [[ "${{ github.repository_owner }}" == "AI-Hackathon2024" ]]; then
+          if [[ "${{ github.repository_owner }}" == "AI-hackathon2024" ]]; then
             echo "repoType=team" >> $GITHUB_ENV
           else
             echo "repoType=personal" >> $GITHUB_ENV
