@@ -22,5 +22,5 @@ jobs:
       env:
         PAT: ${{ secrets.PAT_TOKEN }}
       run: |
-        git remote add origin https://seongyeon1:${PAT}@github.com/AI-hackathon2024/codingtest.git
-        git push -f origin main
+        git remote add repo https://seongyeon1:${PAT}@github.com/AI-hackathon2024/codingtest.git
+        git push -f repo main
