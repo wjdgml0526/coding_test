@@ -36,9 +36,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git remote add upstream https://github.com/AI-hackathon2024/codingtest
+          git remote add upstream https://github.com/AI-Hackathon2024/codingtest
           git fetch upstream
-          git merge upstream/main
+          git merge upstream/main --allow-unrelated-histories
           git push origin main
           gh pr create --title "Auto PR from personal repo" --body "Syncing with team repo" --base main --head YOUR_BRANCH
 
