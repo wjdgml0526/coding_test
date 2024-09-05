@@ -12,6 +12,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      # GitHub token을 사용하여 인증 설정
+      - name: Set up GitHub Token
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       # 레포 구분 로직
       - name: Check if it's the personal repo
         id: repo-check
@@ -25,6 +33,8 @@ jobs:
       # 개인 레포일 경우 팀 레포로 PR 생성
       - name: Sync with team repo and create PR (for personal repo)
         if: env.repoType == 'personal'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git remote add upstream https://github.com/AI-hackathon2024/codingtest
           git fetch upstream
@@ -35,6 +45,8 @@ jobs:
       # 팀 레포일 경우 PR 자동 승인 및 병합
       - name: Approve and merge PR (for team repo)
         if: env.repoType == 'team'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh pr review --approve
           gh pr merge --auto --squash --delete-branch
