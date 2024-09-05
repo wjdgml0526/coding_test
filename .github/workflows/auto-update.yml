@@ -44,7 +44,7 @@ jobs:
           git add .
           git commit -m "Resolved merge conflicts by keeping local changes"
           git push origin main
-          gh pr create --title "Auto PR from personal repo" --body "Syncing with team repo" --base main --head YOUR_BRANCH
+          gh pr create --title "Auto PR from personal repo" --body "Syncing with team repo" --base main --head main
 
       # 팀 레포일 경우 PR 자동 승인 및 병합
       - name: Approve and merge PR (for team repo)
