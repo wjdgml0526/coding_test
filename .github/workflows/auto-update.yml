@@ -26,7 +26,7 @@ jobs:
       - name: Sync with team repo and create PR (for personal repo)
         if: env.repoType == 'personal'
         run: |
-          git remote add upstream https://github.com/team/repo.git
+          git remote add upstream https://github.com/AI-hackathon2024/codingtest
           git fetch upstream
           git merge upstream/main
           git push origin main
