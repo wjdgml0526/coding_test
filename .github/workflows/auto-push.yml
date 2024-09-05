@@ -15,12 +15,12 @@ jobs:
 
     - name: Configure git
       run: |
-        git config --global user.name 'YourGitHubUsername'
-        git config --global user.email 'YourEmail@example.com'
+        git config --global user.name 'seongyeon1'
+        git config --global user.email 'ksy974498@gmail.com'
 
     - name: Push changes to the original repository
       env:
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git remote add original https://<YourGitHubUsername>:${TOKEN}@github.com/AI-hackathon2024/codingtest.git
+        git remote add original https://seongyeon1:${TOKEN}@github.com/AI-hackathon2024/codingtest.git
         git push original main
