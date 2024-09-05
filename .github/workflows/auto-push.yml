@@ -20,7 +20,7 @@ jobs:
 
     - name: Push changes to the original repository
       env:
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PAT: ${{ secrets.PAT_TOKEN }}
       run: |
-        git remote add original https://seongyeon1:${TOKEN}@github.com/AI-hackathon2024/codingtest.git
+        git remote add original https://seongyeon1:${PAT}@github.com/AI-hackathon2024/codingtest.git
         git push original main
