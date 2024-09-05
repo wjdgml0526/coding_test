@@ -1,0 +1,40 @@
+name: Sync and PR
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-and-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # 레포 구분 로직
+      - name: Check if it's the personal repo
+        id: repo-check
+        run: |
+          if [[ "${{ github.repository }}" == "personal-repo-name" ]]; then
+            echo "repoType=personal" >> $GITHUB_ENV
+          else
+            echo "repoType=team" >> $GITHUB_ENV
+          fi
+
+      # 개인 레포일 경우 팀 레포로 PR 생성
+      - name: Sync with team repo and create PR (for personal repo)
+        if: env.repoType == 'personal'
+        run: |
+          git remote add upstream https://github.com/team/repo.git
+          git fetch upstream
+          git merge upstream/main
+          git push origin main
+          gh pr create --title "Auto PR from personal repo" --body "Syncing with team repo" --base main --head YOUR_BRANCH
+
+      # 팀 레포일 경우 PR 자동 승인 및 병합
+      - name: Approve and merge PR (for team repo)
+        if: env.repoType == 'team'
+        run: |
+          gh pr review --approve
+          gh pr merge --auto --squash --delete-branch
