@@ -15,7 +15,7 @@ jobs:
       # GitHub token을 사용하여 인증 설정
       - name: Set up GitHub Token
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -34,7 +34,7 @@ jobs:
       - name: Sync with team repo and create PR (for personal repo)
         if: env.repoType == 'personal'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
           git remote add upstream https://github.com/AI-Hackathon2024/codingtest
           git fetch upstream
