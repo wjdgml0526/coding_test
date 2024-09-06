@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         
@@ -10,6 +11,8 @@ class Solution:
             ans = max(ans, price - min_price) 
         return ans 
 =======
+=======
+>>>>>>> upstream/main
 import heapq
 
 class Solution:
@@ -47,5 +50,9 @@ class Solution:
             max_price = max(price, max_price)
             ans = max(ans, max_price - price)
 
+<<<<<<< HEAD
+        return ans
+>>>>>>> upstream/main
+=======
         return ans
 >>>>>>> upstream/main
