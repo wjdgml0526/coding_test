@@ -15,7 +15,7 @@ jobs:
       # GitHub token을 사용하여 인증 설정
       - name: Set up GitHub Token
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -24,7 +24,7 @@ jobs:
       - name: Check if it's the personal repo
         id: repo-check
         run: |
-          if [[ "${{ github.repository_owner }}" == "AI-hackathon2024" ]]; then
+          if [[ "${{ github.repository_owner }}" == "AI-Hackathon2024" ]]; then
             echo "repoType=team" >> $GITHUB_ENV
           else
             echo "repoType=personal" >> $GITHUB_ENV
@@ -34,13 +34,17 @@ jobs:
       - name: Sync with team repo and create PR (for personal repo)
         if: env.repoType == 'personal'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
           git remote add upstream https://github.com/AI-Hackathon2024/codingtest
           git fetch upstream
-          git merge upstream/main --allow-unrelated-histories
+          git merge upstream/main --allow-unrelated-histories || true
+          git checkout --ours .github/workflows/auto-update.yml
+          git checkout --ours README.md
+          git add .
+          git commit -m "Resolved merge conflicts by keeping local changes"
           git push origin main
-          gh pr create --title "Auto PR from personal repo" --body "Syncing with team repo" --base main --head YOUR_BRANCH
+          gh pr create --title "Auto PR from personal repo" --body "Syncing with team repo" --base main --head main
 
       # 팀 레포일 경우 PR 자동 승인 및 병합
       - name: Approve and merge PR (for team repo)
