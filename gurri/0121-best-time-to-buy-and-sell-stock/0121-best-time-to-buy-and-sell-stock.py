@@ -27,17 +27,12 @@ class Solution:
         #             # print(gap)
         #             ans = max(gap, ans)
 
-        # Sol2 : for - heapq
+        # Sol2 : 역순으로 구하기 
         ans = 0
+        max_price = 0
 
-        for i, buy in enumerate(prices):
-            sell_candi = list(map(lambda x : -x, prices[i+1:]))
-
-            if i != len(prices) -1 : 
-                heapq.heapify(sell_candi)
-                sell = -heapq.heappop(sell_candi)
-
-                if buy < sell :
-                    ans = max(ans, sell - buy)
+        for price in reversed(prices):
+            max_price = max(price, max_price)
+            ans = max(ans, max_price - price)
 
         return ans
