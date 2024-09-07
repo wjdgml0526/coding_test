@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        
+        ans = 0
+        min_price = 9999999999
+
+        for price in prices:
+            min_price = min(price, min_price)
+            ans = max(ans, price - min_price) 
+        return ans 
+=======
+=======
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+>>>>>>> upstream/main
 import heapq
 
 class Solution:
@@ -35,4 +56,17 @@ class Solution:
             max_price = max(price, max_price)
             ans = max(ans, max_price - price)
 
+<<<<<<< HEAD
         return ans
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        return ans
+>>>>>>> upstream/main
+=======
+        return ans
+>>>>>>> upstream/main
+=======
+        return ans
+>>>>>>> upstream/main
+>>>>>>> upstream/main
