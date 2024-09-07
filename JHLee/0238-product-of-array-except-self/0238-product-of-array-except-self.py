@@ -1,5 +1,3 @@
-from functools import reduce
-
 class Solution(object):
     def productExceptSelf(self, nums):
         """
