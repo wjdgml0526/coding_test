@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> upstream/main
 <<<<<<< HEAD
 <<<<<<< HEAD
 class Solution:
@@ -18,6 +21,9 @@ class Solution:
 >>>>>>> upstream/main
 =======
 >>>>>>> upstream/main
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
 >>>>>>> upstream/main
 import heapq
 
@@ -57,9 +63,12 @@ class Solution:
             ans = max(ans, max_price - price)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return ans
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> upstream/main
 <<<<<<< HEAD
         return ans
 >>>>>>> upstream/main
@@ -69,4 +78,7 @@ class Solution:
 =======
         return ans
 >>>>>>> upstream/main
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
 >>>>>>> upstream/main
