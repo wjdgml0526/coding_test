@@ -1,6 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         
@@ -12,6 +23,16 @@ class Solution:
             ans = max(ans, price - min_price) 
         return ans 
 =======
+=======
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
 =======
 >>>>>>> upstream/main
 =======
@@ -56,10 +77,32 @@ class Solution:
 <<<<<<< HEAD
 <<<<<<< HEAD
         return ans
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+        return ans
+=======
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
 >>>>>>> upstream/main
 =======
         return ans
 >>>>>>> upstream/main
 =======
         return ans
+>>>>>>> upstream/main
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+=======
 >>>>>>> upstream/main
