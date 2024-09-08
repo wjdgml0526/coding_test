@@ -15,7 +15,11 @@ class Solution(object):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return [a * b for a, b in zip(prev_product, post_product)]
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
 =======
         return [prev_product[i] * post_product[i] for i in range(len(nums))]
 >>>>>>> upstream/main
