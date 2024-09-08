@@ -7,32 +7,44 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
->>>>>>> upstream/main
-=======
->>>>>>> upstream/main
->>>>>>> upstream/main
->>>>>>> upstream/main
 <<<<<<< HEAD
 =======
 >>>>>>> upstream/main
 <<<<<<< HEAD
 =======
->>>>>>> upstream/main
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> upstream/main
 =======
 >>>>>>> upstream/main
 =======
 >>>>>>> upstream/main
+>>>>>>> upstream/main
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
 >>>>>>> upstream/main
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
@@ -51,8 +63,6 @@ class Solution:
 >>>>>>> upstream/main
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -63,7 +73,15 @@ class Solution:
 >>>>>>> upstream/main
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
 >>>>>>> upstream/main
 <<<<<<< HEAD
 >>>>>>> upstream/main
@@ -74,14 +92,20 @@ class Solution:
 =======
 >>>>>>> upstream/main
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> upstream/main
 <<<<<<< HEAD
 >>>>>>> upstream/main
 =======
 >>>>>>> upstream/main
 =======
 >>>>>>> upstream/main
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
 >>>>>>> upstream/main
 import heapq
 
@@ -130,8 +154,6 @@ class Solution:
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> upstream/main
 <<<<<<< HEAD
 >>>>>>> upstream/main
@@ -142,6 +164,17 @@ class Solution:
 >>>>>>> upstream/main
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> upstream/main
 =======
 =======
 >>>>>>> upstream/main
@@ -153,14 +186,20 @@ class Solution:
 >>>>>>> upstream/main
 >>>>>>> upstream/main
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> upstream/main
 <<<<<<< HEAD
 >>>>>>> upstream/main
 =======
 >>>>>>> upstream/main
 =======
 >>>>>>> upstream/main
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
 >>>>>>> upstream/main
 =======
         return ans
@@ -170,8 +209,6 @@ class Solution:
 >>>>>>> upstream/main
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -182,7 +219,15 @@ class Solution:
 >>>>>>> upstream/main
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
 >>>>>>> upstream/main
 <<<<<<< HEAD
 >>>>>>> upstream/main
@@ -193,12 +238,18 @@ class Solution:
 =======
 >>>>>>> upstream/main
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> upstream/main
 <<<<<<< HEAD
 >>>>>>> upstream/main
 =======
 >>>>>>> upstream/main
 =======
 >>>>>>> upstream/main
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
 >>>>>>> upstream/main
