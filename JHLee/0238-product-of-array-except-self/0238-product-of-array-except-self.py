@@ -14,6 +14,24 @@ class Solution(object):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
         return [a * b for a, b in zip(prev_product, post_product)]
 =======
         return [prev_product[i] * post_product[i] for i in range(len(nums))]
@@ -26,4 +44,52 @@ class Solution(object):
 >>>>>>> upstream/main
 =======
         return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
+        return [prev_product[i] * post_product[i] for i in range(len(nums))]
+>>>>>>> upstream/main
+=======
 >>>>>>> upstream/main
