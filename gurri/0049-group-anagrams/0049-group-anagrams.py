@@ -4,7 +4,7 @@ class Solution:
 
         for s in strs :
             # key 검사
-            k = tuple(sorted(s))
+            k = ''.join(sorted(s))
             if k not in anag :
                 anag[k] = [s]
             else :
