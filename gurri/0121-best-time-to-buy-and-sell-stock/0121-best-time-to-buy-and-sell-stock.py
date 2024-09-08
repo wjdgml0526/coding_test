@@ -1,6 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+>>>>>>> upstream/main
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         
@@ -15,6 +29,19 @@ class Solution:
 =======
 >>>>>>> upstream/main
 =======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
 >>>>>>> upstream/main
 import heapq
 
@@ -56,10 +83,38 @@ class Solution:
 <<<<<<< HEAD
 <<<<<<< HEAD
         return ans
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+<<<<<<< HEAD
+        return ans
+=======
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+>>>>>>> upstream/main
 >>>>>>> upstream/main
 =======
         return ans
 >>>>>>> upstream/main
 =======
         return ans
+>>>>>>> upstream/main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
+=======
+>>>>>>> upstream/main
 >>>>>>> upstream/main
