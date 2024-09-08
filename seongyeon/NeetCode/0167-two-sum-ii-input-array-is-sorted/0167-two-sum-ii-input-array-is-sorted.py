@@ -1,16 +1,16 @@
 class Solution(object):
-    def twoSum(self, num, k):
+    def twoSum(self, numbers, target):
         """
         :type numbers: List[int]
         :type target: int
         :rtype: List[int]
         """
-        i, j = 0, len(num) - 1
+        i, j = 0, len(numbers)-1
         while i < j:
-            sm = num[i] + num[j]
-            if sm == k:
-                return [i + 1, j + 1]
-            elif sm > k:
+            sm = numbers[i] + numbers[j]
+            if sm == target:
+                return [i+1, j+1]
+            elif sm > target:
                 j -= 1
             else:
                 i += 1
