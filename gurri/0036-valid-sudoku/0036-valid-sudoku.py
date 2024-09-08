@@ -2,8 +2,8 @@ from collections import defaultdict
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        for _ in range(len(board)):
-            print(*board[_])
+        # for _ in range(len(board)):
+        #     print(*board[_])
 
         # row
         for row in range(9):
