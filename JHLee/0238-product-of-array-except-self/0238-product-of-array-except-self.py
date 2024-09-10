@@ -10,4 +10,6 @@ class Solution(object):
         for i in range(1, len(nums)):
             prev_product[i] = prev_product[i - 1] * nums[i - 1]
             post_product[- i - 1] = post_product[-i] * nums[-i]
+
+
         return [prev_product[i] * post_product[i] for i in range(len(nums))]
