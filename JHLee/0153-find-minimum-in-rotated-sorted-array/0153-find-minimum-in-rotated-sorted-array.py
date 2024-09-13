@@ -5,10 +5,13 @@ class Solution(object):
         :rtype: int
         """
         lp, rp = 0, len(nums) - 1
+        min_num = 5001
         while lp <= rp:
-            if nums[lp] > nums[rp]:
-                lp += 1
-            elif nums[lp] < nums[rp]:
-                rp -= 1
+            mid = lp + ((rp - lp) // 2)
+            min_num = min(min_num, nums[mid])
+
+            if nums[mid] > nums[rp]:
+                lp = mid + 1
             else:
-                return nums[lp]
+                rp = mid - 1
+        return min(min_num, nums[lp])
