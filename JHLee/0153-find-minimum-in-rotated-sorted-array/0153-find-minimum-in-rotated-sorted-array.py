@@ -5,8 +5,7 @@ class Solution(object):
         :rtype: int
         """
         lp, rp = 0, len(nums) - 1
-        min_num = 5001
-        while lp <= rp:
+        while lp < rp:
             mid = lp + ((rp - lp) // 2)
 
             if nums[mid] > nums[rp]:
