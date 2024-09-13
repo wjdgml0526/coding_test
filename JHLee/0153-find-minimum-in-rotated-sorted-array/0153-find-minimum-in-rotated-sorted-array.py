@@ -8,10 +8,9 @@ class Solution(object):
         min_num = 5001
         while lp <= rp:
             mid = lp + ((rp - lp) // 2)
-            min_num = min(min_num, nums[mid])
 
             if nums[mid] > nums[rp]:
                 lp = mid + 1
             else:
-                rp = mid - 1
-        return min(min_num, nums[lp])
+                rp = mid
+        return nums[lp]
