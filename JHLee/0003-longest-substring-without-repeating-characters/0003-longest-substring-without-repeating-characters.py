@@ -4,20 +4,13 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        char_idx = defaultdict(int)
-        chars = set()
-        max_len = 0
-        cur_len = 0
+        charSet = set()
         pl = 0
-        for pr, string in enumerate(s):
-            if string in chars:
-                max_len = max(max_len, cur_len)
-                pl = char_idx[string]
-                cur_len = pr - pl
-                chars = set(s[pl + 1: pr + 1])
-                char_idx[string] = pr
-            else:
-                cur_len += 1
-                char_idx[string] = pr
-                chars.add(string)
-        return max(max_len, cur_len)
+        max_len = 0
+        for pr in range(len(s)):
+            while s[pr] in charSet:
+                charSet.remove(s[pl])
+                l += 1
+            charSet.add(s[pr])
+            max_len = max(max_len, pr - pl + 1)
+        return max_len
