@@ -10,27 +10,26 @@ class Solution:
         '''
 
         selected = []
+        n = len(candidates)
 
-        def backtrack(idx, cur):
+        def backtrack(idx, target):
             # 기저조건
-            if cur > target :
-                return 
+            if target == 0:
+                result.append(sorted(selected[:]))
             
             # 조건 만족 시 추가 
-            if cur == target :
-                result.add(tuple(sorted(selected[:])))
+            if idx == n  or target < 0:
                 return
             
-            for i in range(len(candidates)):
-                if cur <= target :
-                    selected.append(candidates[i])
-                    backtrack(i, cur + candidates[i])
-                    selected.pop()
+            for j in range(idx ,n):
+                selected.append(candidates[j])
+                backtrack(j, target - candidates[j])
+                selected.pop()
 
 
 
 
-        result = set()    
-        backtrack(0, 0)
+        result = []
+        backtrack(0, target)
         return result
         
