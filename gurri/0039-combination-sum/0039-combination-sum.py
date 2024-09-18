@@ -9,13 +9,12 @@ class Solution:
         - 2, 2, 2, 2 / 2, 3, 3 / 3, 5
         '''
 
-        selected = []
         n = len(candidates)
 
-        def backtrack(idx, target):
+        def backtrack(selected, idx, target):
             # 기저조건
             if target == 0:
-                result.append(sorted(selected[:]))
+                result.append(list(selected))
             
             # 조건 만족 시 추가 
             if idx == n  or target < 0:
@@ -23,13 +22,13 @@ class Solution:
             
             for j in range(idx ,n):
                 selected.append(candidates[j])
-                backtrack(j, target - candidates[j])
+                backtrack(selected, j, target - candidates[j])
                 selected.pop()
 
 
 
 
         result = []
-        backtrack(0, target)
+        backtrack([], 0, target)
         return result
         
