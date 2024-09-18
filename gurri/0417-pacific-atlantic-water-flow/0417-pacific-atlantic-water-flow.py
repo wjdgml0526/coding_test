@@ -1,6 +1,6 @@
 class Solution:
     def pacificAtlantic(self, M):
-        if not M or not M[0]: return []
+        # if not M or not M[0]: return []
         
         m, n = len(M[0]), len(M)
         def bfs(starts):
