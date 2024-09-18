@@ -15,7 +15,7 @@ class Solution:
             # 비어있지 않으면
             if stack :
                 # 현재 날짜에서 스택 맨 위 날짜 차이를 기록
-                result[i] = stack[-1] - i
+                res[i] = stack[-1] - i
 
             # 현재 인덱스 추가
             stack.append(i)
