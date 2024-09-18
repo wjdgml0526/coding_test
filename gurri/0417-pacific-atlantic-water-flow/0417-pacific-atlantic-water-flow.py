@@ -7,7 +7,6 @@ class Solution:
 
         def bfs(starts):
             q = deque(starts)
-            visit = [[0 for _ in range(m)] for _ in range(n)]
             visited = set(starts)
             
             dxs, dys = [0,1,0,-1], [1,0,-1,0]
@@ -15,8 +14,6 @@ class Solution:
             while q : 
                 x, y = q.popleft()
 
-                if (x, y) in visited:
-                    continue
 
                 for dx, dy in zip(dxs,dys):
                     nx, ny = x+dx, y+dy
