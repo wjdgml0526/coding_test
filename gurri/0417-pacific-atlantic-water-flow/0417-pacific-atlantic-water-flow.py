@@ -1,21 +1,35 @@
+from collections import deque
+
 class Solution:
     def pacificAtlantic(self, M):
-        # if not M or not M[0]: return []
         
-        m, n = len(M[0]), len(M)
+        n, m = len(M), len(M[0])
+
         def bfs(starts):
-            queue = deque(starts)
+            q = deque(starts)
+            visit = [[0 for _ in range(m)] for _ in range(n)]
             visited = set(starts)
-            while queue:
-                x, y = queue.popleft()
-                for dx, dy in [(x, y+1), (x, y-1), (x-1, y), (x+1, y)]:
-                    if 0 <= dx < n and 0 <= dy < m and (dx, dy) not in visited and M[dx][dy] >= M[x][y]:
-                        queue.append((dx, dy))
-                        visited.add((dx, dy))
-                        
-            return visited
+            
+            dxs, dys = [0,1,0,-1], [1,0,-1,0]
+
+            while q : 
+                x, y = q.popleft()
+
+                if (x, y) in visited:
+                    continue
+
+                for dx, dy in zip(dxs,dys):
+                    nx, ny = x+dx, y+dy
+
+                    if 0<=nx<n and 0<=ny<m and (nx, ny) not in visited :
+                        if M[x][y] <= M[nx][ny]:
+                            q.append((nx, ny))
+                            visited.add((nx, ny))
+
+            return visited            
+
         
-        pacific  = [(0, i) for i in range(m)]   + [(i, 0) for i in range(1,n)]
-        atlantic = [(n-1, i) for i in range(m)] + [(i, m-1) for i in range(n-1)]
-        
-        return bfs(pacific) & bfs(atlantic)
+        pacific = [(0, i) for i in range(m)] + [(i, 0) for i in range(n)]
+        atlantic = [(n-1, i) for i in range(m)] + [(i, m-1) for i in range(n)]
+
+        return bfs(atlantic) & bfs(pacific)
