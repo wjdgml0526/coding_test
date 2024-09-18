@@ -1,22 +1,18 @@
 class Solution:
     def partition(self, s: str) -> List[List[str]]:
-        
-        selected = []
+        ans = []
 
-        # 부분문자열 중 palindrome 만을 반환
-        def backtracking(idx):
-            if idx >= len(s):
-                print(selected)
-                return
+        def backtracking(i, curr):
+            if i == len(s):
+                ans.append(curr[:])
             
-            for i in range(idx, len(s)):
-
-                selected.append(i)
-                backtracking(i+1)
-                selected.pop()
-                backtracking(i+1)
-
-
-        backtracking(0)
+            for j in range(i, len(s)):
+                
+                if s[i:j+1] == s[i:j+1][::-1]:
+                    curr.append(s[i:j+1])
+                    backtracking(j+1, curr)
+                    curr.pop()
 
 
+        backtracking(0, [])
+        return ans
