@@ -15,8 +15,9 @@ class Solution:
             
             visited = board[x][y]
             board[x][y] = '.'
-
+            result = dfs(x+1, y, k+1) or dfs(x-1, y, k+1) or dfs(x, y+1, k+1) or dfs(x, y-1, k+1)
             board[x][y] = visited # dfs
+            
             return result
 
 
