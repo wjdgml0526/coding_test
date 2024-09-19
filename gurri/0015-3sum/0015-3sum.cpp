@@ -3,10 +3,10 @@ public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         // 요구사항 : 주어진 배열에서 합이 0 되는 세개의 숫자를 모두 찾기
 
-        // 정렬 진행
+        // 정렬 진행 - O(nlogn)
         sort(nums.begin(), nums.end());
         vector<vector<int>> ans;
-        
+        // O(n^2)
         for (int i=0; i<nums.size();i++){
 
             if (i>0 && nums[i] == nums[i-1]) continue;
