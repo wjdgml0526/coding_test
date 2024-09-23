@@ -5,21 +5,21 @@ class Solution(object):
         :type k: int
         :rtype: List[int]
         """
-        output = []
-        q = deque()  # index
-        l = r = 0
+        w_idx = deque()
+        result = []
+        pl = 0
+        for pr in range(len(nums)):
+            # nums[pr]보다 작은 값은 모두 window에서 삭제
+            while w_idx and nums[w_idx[-1]] < nums[pr]:
+                w_idx.pop()
+            w_idx.append(pr)
 
-        while r < len(nums):
-            while q and nums[q[-1]] < nums[r]:
-                q.pop()
-            q.append(r)
-
-            if l > q[0]:
-                q.popleft()
-
-            if (r + 1) >= k:
-                output.append(nums[q[0]])
-                l += 1
-            r += 1
-
-        return output
+            # window 범위에 들어가지 않는 index 삭제
+            if pl > w_idx[0]:
+                w_idx.popleft()
+            
+            # result에 가장 큰 값 저장
+            if (pr + 1) >= k:
+                result.append(nums[w_idx[0]])
+                pl += 1
+        return result
