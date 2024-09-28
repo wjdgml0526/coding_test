@@ -10,18 +10,17 @@ class Solution(object):
         :type root: TreeNode
         :rtype: int
         """
-        res = 0
-
-        def dfs(root):
-            global res
-
-            if not root:
+        diameter = [0]
+        
+        def helper(node):
+            if not node:
                 return 0
-            left = dfs(root.left)
-            right = dfs(root.right)
-            res = max(res, left + right)
-
-            return 1 + max(left, right)
-
-        dfs(root)
-        return res
+            
+            left = helper(node.left)
+            right = helper(node.right)
+            diameter[0] = max(diameter[0], left + right)
+            
+            return max(left, right) + 1
+        
+        helper(root)
+        return diameter[0]
